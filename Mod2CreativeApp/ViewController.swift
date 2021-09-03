@@ -11,6 +11,26 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var labelOutlet: UILabel!
   
+    @IBOutlet weak var clearOutlet: UIButton!
+    @IBOutlet weak var changeSignOutlet: UIButton!
+    @IBOutlet weak var percentOutlet: UIButton!
+    @IBOutlet weak var divisionOutlet: UIButton!
+    @IBOutlet weak var multiplicationOutlet: UIButton!
+    @IBOutlet weak var substractionOutlet: UIButton!
+    @IBOutlet weak var additionOutlet: UIButton!
+    @IBOutlet weak var equalsOutlet: UIButton!
+    @IBOutlet weak var decimalOutlet: UIButton!
+    @IBOutlet weak var zeroOutlet: UIButton!
+    @IBOutlet weak var oneOutlet: UIButton!
+    @IBOutlet weak var twoOutlet: UIButton!
+    @IBOutlet weak var threeOutlet: UIButton!
+    @IBOutlet weak var fourOutlet: UIButton!
+    @IBOutlet weak var fiveOutlet: UIButton!
+    @IBOutlet weak var sixOutlet: UIButton!
+    @IBOutlet weak var sevenOutlet: UIButton!
+    @IBOutlet weak var eightOutlet: UIButton!
+    @IBOutlet weak var nineOutlet: UIButton!
+    
     var zero = 0.0
     var one = 1.0
     var two = 2.0
@@ -28,13 +48,21 @@ class ViewController: UIViewController {
     var total = 0.0
     var previous = 0.0
     var current = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         labelOutlet.text = String(total)
         
+        /*clearOutlet.layer.borderWidth = 2
+        clearOutlet.layer.cornerRadius = 46.835
+        clearOutlet.clipsToBounds = true*/
+        
+        
     }
 
     @IBAction func clearAction(_ sender: UIButton) {
+        previous = 0.0
+        current = 0.0
         total = 0.0
         labelOutlet.text = String(total)
     }
@@ -57,16 +85,14 @@ class ViewController: UIViewController {
         }
         if(previous == current){
             if(whatOperation == 1){
-              
-            
+
                 current = zero
               
                 total = previous / current
                 labelOutlet.text = String(zero)
             }
             if(whatOperation == 2){
-              
-            
+
                 current = zero
                 
                 total = previous * current

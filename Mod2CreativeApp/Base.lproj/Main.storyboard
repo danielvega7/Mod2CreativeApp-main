@@ -214,7 +214,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="k04-Uk-6qg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9fw-O6-w8q"/>
                             <constraint firstItem="xXs-eo-D4R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="TzC-KN-0sQ"/>
@@ -240,7 +240,26 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="additionOutlet" destination="xuz-D0-CO4" id="yhU-RR-gTd"/>
+                        <outlet property="changeSignOutlet" destination="nWp-mj-z2f" id="y6n-hl-qwb"/>
+                        <outlet property="clearOutlet" destination="8bO-Nt-dIf" id="EkY-Mh-pfY"/>
+                        <outlet property="decimalOutlet" destination="aKk-bc-Eal" id="ZtZ-VU-wlQ"/>
+                        <outlet property="divisionOutlet" destination="hX7-bV-k0C" id="KOH-uY-Fai"/>
+                        <outlet property="eightOutlet" destination="ric-cY-kxc" id="Sly-Kn-SgE"/>
+                        <outlet property="equalsOutlet" destination="gJa-5c-IXj" id="tM2-Jx-Um8"/>
+                        <outlet property="fiveOutlet" destination="vtz-jH-o1w" id="vTN-16-eLN"/>
+                        <outlet property="fourOutlet" destination="Bcd-7K-d1h" id="KgQ-s4-0en"/>
                         <outlet property="labelOutlet" destination="k04-Uk-6qg" id="GOL-Ym-Z3U"/>
+                        <outlet property="multiplicationOutlet" destination="xzw-Jw-2qX" id="rGh-KJ-g8W"/>
+                        <outlet property="nineOutlet" destination="JCm-wr-1tP" id="ZMQ-U4-OzQ"/>
+                        <outlet property="oneOutlet" destination="hSb-uk-EBC" id="GPX-SY-IdY"/>
+                        <outlet property="percentOutlet" destination="Rpr-mW-ULN" id="pCd-cL-8RJ"/>
+                        <outlet property="sevenOutlet" destination="4hC-uj-jY0" id="lrL-jq-XkM"/>
+                        <outlet property="sixOutlet" destination="xPK-bR-Rh9" id="4X2-r5-17t"/>
+                        <outlet property="substractionOutlet" destination="bFg-6f-a91" id="4Uc-OY-EuQ"/>
+                        <outlet property="threeOutlet" destination="eTe-bt-USM" id="q8R-M4-kND"/>
+                        <outlet property="twoOutlet" destination="5Co-fk-Cgc" id="KtT-Jk-PQM"/>
+                        <outlet property="zeroOutlet" destination="Qpl-Wo-8Zw" id="Ijr-li-GLK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -255,20 +274,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtF-sz-2I5">
-                                <rect key="frame" x="99" y="221" width="192" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQH-9V-RI4">
+                                <rect key="frame" x="87" y="131" width="216" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Formula"/>
+                                <state key="normal" title="Perpendicular 2D Vectors"/>
+                                <connections>
+                                    <action selector="perpendicularCalulator:" destination="tdA-qM-D48" eventType="touchUpInside" id="jSr-hf-LDr"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vector 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6tT-44-sqi">
+                                <rect key="frame" x="108" y="169" width="174" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vector 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxd-WX-JFa">
+                                <rect key="frame" x="108" y="211" width="174" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Output:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f4-lc-6tz">
+                                <rect key="frame" x="108" y="253" width="174" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IDy-Li-0kS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0M2-86-KZu"/>
+                    <navigationItem key="navigationItem" id="0M2-86-KZu">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Or2-np-ncR">
+                            <rect key="frame" x="130" y="7" width="130" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Syntax explanation"/>
+                            <connections>
+                                <segue destination="0RX-fN-Gga" kind="presentation" id="Zu7-bt-2x4"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="vector1TextField" destination="6tT-44-sqi" id="7VK-jn-7jQ"/>
+                        <outlet property="vector2TextField" destination="bxd-WX-JFa" id="l7O-Ke-B4p"/>
+                        <outlet property="vectorLabelOutlet" destination="6f4-lc-6tz" id="dBK-W9-KQr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2r-K8-B44" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4587.6923076923076" y="614.92890995260666"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9hJ-G1-RpV">
+            <objects>
+                <viewController id="0RX-fN-Gga" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NkY-ZF-hNU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="2D perpendicular vector: type into text field like this    {X,Y}" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FH7-xo-J9j">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VQz-DE-z5O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FH7-xo-J9j" firstAttribute="leading" secondItem="VQz-DE-z5O" secondAttribute="leading" id="3sn-sm-pWC"/>
+                            <constraint firstItem="VQz-DE-z5O" firstAttribute="trailing" secondItem="FH7-xo-J9j" secondAttribute="trailing" id="6gx-kg-M03"/>
+                            <constraint firstItem="VQz-DE-z5O" firstAttribute="bottom" secondItem="FH7-xo-J9j" secondAttribute="bottom" id="Abp-i0-Swp"/>
+                            <constraint firstItem="FH7-xo-J9j" firstAttribute="top" secondItem="VQz-DE-z5O" secondAttribute="top" id="fxW-Cj-FaH"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="72s-GV-gA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4588" y="-58"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4vJ-kf-Khv">
@@ -290,6 +376,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

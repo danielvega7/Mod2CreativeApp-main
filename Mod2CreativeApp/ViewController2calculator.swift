@@ -9,12 +9,23 @@ import UIKit
 
 class ViewController2calculator: UIViewController {
 
+    @IBOutlet weak var vector1TextField: UITextField!
+    @IBOutlet weak var vector2TextField: UITextField!
+    @IBOutlet weak var vectorLabelOutlet: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
        //jamal fosho
     }
     
+    @IBAction func perpendicularCalulator(_ sender: UIButton) {
+       
+        
+        
+        
+    }
     
 
 }
