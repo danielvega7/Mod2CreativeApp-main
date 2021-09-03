@@ -254,6 +254,13 @@
                     <view key="view" contentMode="scaleToFill" id="dd5-FM-b7K">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtF-sz-2I5">
+                                <rect key="frame" x="99" y="221" width="192" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Formula"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="IDy-Li-0kS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -261,7 +268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2r-K8-B44" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4588" y="615"/>
+            <point key="canvasLocation" x="4587.6923076923076" y="614.92890995260666"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4vJ-kf-Khv">
