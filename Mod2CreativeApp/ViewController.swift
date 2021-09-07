@@ -269,7 +269,7 @@ class ViewController: UIViewController {
                 labelOutlet.text = String(four)
             }
             if(whatOperation == 4){
-                if(counter <= 2){
+                if(counter <= 1){
                 counter += 1
                 current = four
                

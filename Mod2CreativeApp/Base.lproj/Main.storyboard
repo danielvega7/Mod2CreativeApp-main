@@ -274,40 +274,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQH-9V-RI4">
-                                <rect key="frame" x="87" y="131" width="216" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Perpendicular 2D Vectors"/>
-                                <connections>
-                                    <action selector="perpendicularCalulator:" destination="tdA-qM-D48" eventType="touchUpInside" id="jSr-hf-LDr"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vector 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6tT-44-sqi">
-                                <rect key="frame" x="108" y="169" width="174" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vector 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxd-WX-JFa">
-                                <rect key="frame" x="108" y="211" width="174" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Output:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f4-lc-6tz">
-                                <rect key="frame" x="108" y="253" width="174" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Alv-40-1ax">
+                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQH-9V-RI4">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="108"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <state key="normal" title="Perpendicular 2D Vectors">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="perpendicularCalulator:" destination="tdA-qM-D48" eventType="touchUpInside" id="jSr-hf-LDr"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Component 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxd-WX-JFa">
+                                        <rect key="frame" x="0.0" y="113" width="390" height="108"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f4-lc-6tz">
+                                        <rect key="frame" x="0.0" y="226" width="390" height="108"/>
+                                        <color key="backgroundColor" red="0.97977141646111032" green="1" blue="0.67840561965798396" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Deq-Ev-sVC">
+                                        <rect key="frame" x="0.0" y="339" width="390" height="108"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <state key="normal" title="Distance Formula"/>
+                                        <connections>
+                                            <action selector="distanceAction:" destination="tdA-qM-D48" eventType="touchUpInside" id="AH2-zc-fEi"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="vector 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6tT-44-sqi">
+                                        <rect key="frame" x="0.0" y="452" width="390" height="108"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZQ-eW-GYK">
+                                        <rect key="frame" x="0.0" y="565" width="390" height="108"/>
+                                        <color key="backgroundColor" red="0.97977141649999999" green="1" blue="0.67840561970000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IDy-Li-0kS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Alv-40-1ax" firstAttribute="leading" secondItem="IDy-Li-0kS" secondAttribute="leading" id="7PV-A9-cMR"/>
+                            <constraint firstItem="IDy-Li-0kS" firstAttribute="trailing" secondItem="Alv-40-1ax" secondAttribute="trailing" id="7k8-Tg-qEO"/>
+                            <constraint firstItem="IDy-Li-0kS" firstAttribute="bottom" secondItem="Alv-40-1ax" secondAttribute="bottom" id="mHc-xa-ZzI"/>
+                            <constraint firstItem="Alv-40-1ax" firstAttribute="top" secondItem="IDy-Li-0kS" secondAttribute="top" id="oEZ-HA-NRO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0M2-86-KZu">
                         <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Or2-np-ncR">
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Or2-np-ncR">
                             <rect key="frame" x="130" y="7" width="130" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Syntax explanation"/>
@@ -317,6 +343,7 @@
                         </button>
                     </navigationItem>
                     <connections>
+                        <outlet property="distanceFormulaLabelOutlet" destination="4ZQ-eW-GYK" id="Swe-rj-Z09"/>
                         <outlet property="vector1TextField" destination="6tT-44-sqi" id="7VK-jn-7jQ"/>
                         <outlet property="vector2TextField" destination="bxd-WX-JFa" id="l7O-Ke-B4p"/>
                         <outlet property="vectorLabelOutlet" destination="6f4-lc-6tz" id="dBK-W9-KQr"/>
@@ -334,11 +361,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="2D perpendicular vector: type into text field like this    {X,Y}" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FH7-xo-J9j">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FH7-xo-J9j">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">2D perpendicular vector: type into text field like this    {X,Y}                                                    Distance Formula: type into text field like this {x1,y1},{x2,y2}</string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -348,7 +376,11 @@
                             <constraint firstItem="FH7-xo-J9j" firstAttribute="leading" secondItem="VQz-DE-z5O" secondAttribute="leading" id="3sn-sm-pWC"/>
                             <constraint firstItem="VQz-DE-z5O" firstAttribute="trailing" secondItem="FH7-xo-J9j" secondAttribute="trailing" id="6gx-kg-M03"/>
                             <constraint firstItem="VQz-DE-z5O" firstAttribute="bottom" secondItem="FH7-xo-J9j" secondAttribute="bottom" id="Abp-i0-Swp"/>
+                            <constraint firstItem="FH7-xo-J9j" firstAttribute="trailing" secondItem="VQz-DE-z5O" secondAttribute="trailing" id="M7p-H9-o5u"/>
+                            <constraint firstItem="FH7-xo-J9j" firstAttribute="top" secondItem="VQz-DE-z5O" secondAttribute="top" id="aNq-kh-W6G"/>
+                            <constraint firstItem="FH7-xo-J9j" firstAttribute="bottom" secondItem="VQz-DE-z5O" secondAttribute="bottom" id="bFN-ZM-7Lh"/>
                             <constraint firstItem="FH7-xo-J9j" firstAttribute="top" secondItem="VQz-DE-z5O" secondAttribute="top" id="fxW-Cj-FaH"/>
+                            <constraint firstItem="FH7-xo-J9j" firstAttribute="leading" secondItem="VQz-DE-z5O" secondAttribute="leading" id="lgs-TV-J5J"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -379,11 +411,17 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
