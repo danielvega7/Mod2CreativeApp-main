@@ -48,6 +48,7 @@ class ViewController2calculator: UIViewController {
 let char = ting[ting.index(ting.startIndex, offsetBy: 1)]
             
 let char2 = ting[ting.index(ting.startIndex, offsetBy: 3)]
+            
             if Int(String(char)) != nil && Int(String(char2)) != nil {
                 vectorLabelOutlet.text = "{\(char2), -\(char)}"
             }
@@ -98,7 +99,7 @@ let char2 = ting[ting.index(ting.startIndex, offsetBy: 3)]
     
     
 
-        if vector2TextField.text!.count >= 9{
+        if vector2TextField.text!.count >= 10{
 
             ting2 = vector2TextField.text!
 
